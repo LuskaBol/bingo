@@ -36,7 +36,7 @@ def get_raw_url_response(url):
 def download_binary_from_url(url, binary_name):
     return send_file(io.BytesIO(requests.get(url).content), 
                  mimetype='application/octet-stream', 
-                 attachment_filename = binary_name)
+                 download_name = binary_name)
 
 @app.route("/revshell", defaults={"port": "4444"})
 @app.route('/revshell/<port>')
