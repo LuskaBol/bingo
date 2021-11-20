@@ -6,12 +6,13 @@ from netifaces import interfaces, ifaddresses, AF_INET
 
 net_interfaces = interfaces()
 
-if not os.path.exists(os.path.expanduser('~') + '/.config/bingo.yaml'):
-    url = 'https://raw.githubusercontent.com/LuskaBol/bingo/main/bingo.conf'
+config_path = os.path.expanduser('~') + '/.config/bingo.yaml'
+if not os.path.exists(config_path):
+    url = 'https://raw.githubusercontent.com/LuskaBol/bingo/main/bingo.yaml'
     r = requests.get(url, allow_redirects=True)
-    open(os.path.expanduser('~') + '/.config/bingo.conf', 'wb').write(r.content)
+    open(config_path, 'wb').write(r.content)
 else:
-    with open(os.path.expanduser('~') + '/.config/bingo.conf', 'r')  as stream:
+    with open(config_path, 'r')  as stream:
         try:
             parsed = yaml.safe_load(stream)
             for i in parsed.get('program'):
