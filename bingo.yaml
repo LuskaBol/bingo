@@ -29,25 +29,25 @@ program:
     - os: linux
   chisel:
     - url: "https://raw.githubusercontent.com/LuskaBol/static-binaries/main/chisel"
-	- type: binary
-	- os: linux
+    - type: binary
+    - os: linux
   docker:
     - url: "https://raw.githubusercontent.com/LuskaBol/static-binaries/main/docker"
-	- type: binary
-	- os: linux
+    - type: binary
+    - os: linux
   nc.exe:
     - url: "https://raw.githubusercontent.com/int0x33/nc.exe/master/nc.exe"
-	- type: binary
-	- os: windows
+    - type: binary
+    - os: windows
   nmap:
     - url: "https://raw.githubusercontent.com/andrew-d/static-binaries/master/binaries/linux/x86_64/nmap"
-	- type: binary
-	- os: linux
+    - type: binary
+    - os: linux
   mimikatz:
     - url: "https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1"
-	- type: script
-	- os: windows
+    - type: script
+    - os: windows
   mimikatz.exe:
     - url: "https://raw.githubusercontent.com/ParrotSec/mimikatz/master/x64/mimikatz.exe"
-	- type: binary
-	- os: windows
+    - type: binary
+    - os: windows

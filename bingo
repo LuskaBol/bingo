@@ -15,8 +15,6 @@ else:
     with open(config_path, 'r')  as stream:
         try:
             parsed = yaml.safe_load(stream)
-            for i in parsed.get('program'):
-                print(i)
         except yaml.YAMLError as exc:
             print(exc)
 
