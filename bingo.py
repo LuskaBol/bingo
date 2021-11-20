@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import requests, io, sys, yaml, os
 from flask import Flask, send_file, request
 from netifaces import interfaces, ifaddresses, AF_INET
