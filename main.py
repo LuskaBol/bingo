@@ -6,7 +6,7 @@ from netifaces import interfaces, ifaddresses, AF_INET
 net_interfaces = interfaces()
 
 if not os.path.exists(os.path.expanduser('~') + '/.config/bingo.conf'):
-    url = '' # Adicionar url do raw do github aqui
+    url = 'https://raw.githubusercontent.com/LuskaBol/bingo/main/bingo.conf'
     r = requests.get(url, allow_redirects=True)
     open(os.path.expanduser('~') + '/.config/bingo.conf', 'wb').write(r.content)
 else:
@@ -57,7 +57,7 @@ def get_program(program_name):
 @app.route('/<path:req_path>')
 def dir_listing(req_path):
     BASE_DIR = os.path.abspath(os.getcwd())
-    abs_path = os.path.join(BASE_DIR, req_path).replace('.', '') # patcheando path traversal aeheahueahuhuea
+    abs_path = os.path.join(BASE_DIR, req_path).replace('.', '')
     if os.path.isfile(abs_path):
         return send_file(abs_path)
     return ''
