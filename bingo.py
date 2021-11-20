@@ -5,7 +5,7 @@ from netifaces import interfaces, ifaddresses, AF_INET
 
 net_interfaces = interfaces()
 
-if not os.path.exists(os.path.expanduser('~') + '/.config/bingo.conf'):
+if not os.path.exists(os.path.expanduser('~') + '/.config/bingo.yaml'):
     url = 'https://raw.githubusercontent.com/LuskaBol/bingo/main/bingo.conf'
     r = requests.get(url, allow_redirects=True)
     open(os.path.expanduser('~') + '/.config/bingo.conf', 'wb').write(r.content)
