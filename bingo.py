@@ -67,7 +67,7 @@ if __name__ == '__main__':
     cli = sys.modules['flask.cli']
     cli.show_server_banner = lambda *x: None
     try:
-      interface = next(filter(lambda x: x in net_interfaces, ['tun0', 'eth0', 'eno2']))
+      interface = next(filter(lambda x: x in net_interfaces, ['tun0', 'eth0']))
       print(f'Your ip is: {ifaddresses(interface)[2][0]["addr"]}')
     except StopIteration:
       print('We couldn\'t find your net interface :(')
