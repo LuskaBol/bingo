@@ -1,4 +1,4 @@
-# bingo - Penetration Testing Toolkit
+# Bingo - Penetration Testing Toolkit
 
 bingo facilitates the distribution and execution of essential tools for penetration testing, allowing the attacker to fetch them on the target machine without internet access on it.
 
